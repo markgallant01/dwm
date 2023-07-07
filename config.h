@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -58,6 +59,13 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+/* my commands start here */
+static const char *upbright[] = { "xbacklight", "-inc", "5", NULL };
+static const char *downbright[] = { "xbacklight", "-dec", "5", NULL };
+static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+static const char *mutemic[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -94,6 +102,13 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+  /* my keybinds start here */
+  { 0, XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
+  { 0, XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
+  { 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
+  { 8, XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+  { 0, XF86XK_AudioMute, spawn, {.v = mutevol } },
+  { 0, XF86XK_AudioMicMute, spawn, {.v = mutemic } },
 };
 
 /* button definitions */
