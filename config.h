@@ -107,7 +107,7 @@ static const Key keys[] = {
   { 0, XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
   { 0, XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
   { 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
-  { 8, XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+  { 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
   { 0, XF86XK_AudioMute, spawn, {.v = mutevol } },
   { 0, XF86XK_AudioMicMute, spawn, {.v = mutemic } },
 };
