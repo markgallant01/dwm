@@ -110,7 +110,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
   /* my keybinds start here */
   { 0, XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
+  { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
   { 0, XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
+  { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
   { 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
   { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
   { 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
