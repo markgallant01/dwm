@@ -76,7 +76,8 @@ static const char *mutemic[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@",
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+/*	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },*/
+    { MODKEY,                       XK_p,      spawn,          SHCMD("~/.config/rofi/launchers/type-2/launcher.sh") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
