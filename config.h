@@ -73,6 +73,7 @@ static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5
 static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 static const char *mutemic[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
+static const char *killdwm[] = { "pkill", "dwm", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -113,6 +114,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = killdwm } },
   /* my keybinds start here */
   { 0, XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
   { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
