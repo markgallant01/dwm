@@ -83,7 +83,7 @@ static const char *killdwm[] = { "pkill", "dwm", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 /*	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },*/
-    { MODKEY,                       XK_p,      spawn,          SHCMD("~/.config/rofi/launchers/type-2/launcher.sh") },
+    { MODKEY,                       XK_p,      spawn,          SHCMD("~/.config/rofi/launchers/type-4/launcher.sh") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
