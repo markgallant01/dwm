@@ -119,18 +119,17 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = killdwm } },
-  /* my keybinds start here */
-    { MODKEY,                       XK_w,       spawn,      SHCMD("~/.dotfiles/.fehbg") },
-  { 0, XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
-  { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
-  { 0, XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
-  { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
-  { 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
-  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
-  { 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
-  { 0, XF86XK_AudioMute, spawn, {.v = mutevol } },
-  { 0, XF86XK_AudioMicMute, spawn, {.v = mutemic } },
+
+    /* my keybinds start here */
+    { MODKEY,   XK_w,               spawn, SHCMD("~/.dotfiles/.fehbg") },
+    { 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("~/.dotfiles/scripts/inc_brightness.sh") },
+    { 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("~/.dotfiles/scripts/dec_brightness.sh") },
+    { 0, XF86XK_AudioRaiseVolume,   spawn, {.v = upvol } },
+    { 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
+    { 0, XF86XK_AudioLowerVolume,   spawn, {.v = downvol } },
+    { 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("~/.dotfiles/scripts/update_statusbar.sh") },
+    { 0, XF86XK_AudioMute,          spawn, {.v = mutevol } },
+    { 0, XF86XK_AudioMicMute,       spawn, {.v = mutemic } },
 };
 
 /* button definitions */
