@@ -119,8 +119,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = killdwm } },
+	{ MODKEY|ControlMask,           XK_r,      quit,           {0} },
+	{ MODKEY|ControlMask,           XK_q,      spawn,          {.v = killdwm } },
 
     /* my keybinds start here */
     { MODKEY,   XK_w,               spawn, SHCMD("~/.dotfiles/.fehbg") },
