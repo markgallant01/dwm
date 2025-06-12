@@ -72,7 +72,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 /* my commands start here */
 static const char *upbright[] = { "xbacklight", "-inc", "5", NULL };
 static const char *downbright[] = { "xbacklight", "-dec", "5", NULL };
