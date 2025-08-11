@@ -100,8 +100,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ControlMask,              XK_r,      quit,           {0} },
-    { MODKEY|ControlMask,              XK_q,      spawn,          { .v = quitDwm } }
+	{ MODKEY|ControlMask,           XK_r,      quit,           {0} },
+    { MODKEY|ControlMask,           XK_q,      spawn,          { .v = quitDwm } }
 };
 
 /* button definitions */
