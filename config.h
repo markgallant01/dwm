@@ -14,7 +14,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 0;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "Liberation Mono:size=12",
-                                        "Symbols Nerd Font:size=16"};
+                                        "Symbols Nerd Font:size=14"};
 static const char dmenufont[]       = "Liberation Mono:size=11";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -35,8 +35,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class            instance    title       tags mask     isfloating   monitor */
-	{ "firefox-esr",    NULL,       NULL,       1 << 1,       0,           -1 },
+	/* class            instance    title       tags mask   isfloating  monitor */
+	{ "firefox-esr",    NULL,       NULL,       1 << 1,     0,          -1 },
+    { "discord",        NULL,       NULL,       1 << 3,     0,          -1 },
 };
 
 /* layout(s) */
