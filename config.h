@@ -15,7 +15,7 @@ static const int horizpadbar        = 0;        /* horizontal padding for status
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "Liberation Mono:size=12",
                                         "Symbols Nerd Font:size=14"};
-static const char dmenufont[]       = "Liberation Mono:size=24";
+static const char dmenufont[]       = "Liberation Mono:size=22";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -69,7 +69,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i",
+                                  "-l", "5", "-fn", dmenufont, "-x",
+                                  "760", "-y", "400", "-z", "400",
+                                  NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "windows11-grid-dark", "-show-icons", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *quitDwm[] = { "pkill", "dwm", NULL };
