@@ -15,7 +15,7 @@ static const int horizpadbar        = 0;        /* horizontal padding for status
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "Liberation Mono:size=12",
                                         "Symbols Nerd Font:size=14"};
-static const char dmenufont[]       = "Liberation Mono:size=18";
+static const char dmenufont[]       = "Liberation Mono:size=24";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
