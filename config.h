@@ -71,7 +71,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i",
                                   "-l", "5", "-fn", dmenufont, "-x",
-                                  "760", "-y", "400", "-z", "400",
+                                  "660", "-y", "400", "-z", "600",
                                   NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "windows11-grid-dark", "-show-icons", NULL };
 static const char *termcmd[]  = { "st", NULL };
