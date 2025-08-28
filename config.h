@@ -73,13 +73,13 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i",
                                   "-l", "5", "-fn", dmenufont, "-x",
                                   "660", "-y", "400", "-z", "600",
                                   NULL };
-static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "windows11-grid-dark", "-show-icons", NULL };
+static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *quitDwm[] = { "pkill", "dwm", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
