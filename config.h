@@ -67,14 +67,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class            instance    title       tags mask   isfloating  monitor */
-	{ "firefox-esr",    NULL,       NULL,       1 << 1,     0,          -1 },
-    { "firefox",        NULL,       NULL,       1 << 1,     0,          -1 },
-    { "discord",        NULL,       NULL,       1 << 3,     0,          -1 },
-    { "steam",          NULL,       NULL,       1 << 4,     0,          -1 },
-    { "blueman-manager", NULL,      NULL,       0,          1,          -1 },
-    { "Blueman-manager", NULL,      NULL,       0,          1,          -1 },
-    { "pavucontrol",    NULL,       NULL,       0,          1,          -1 },
+	/* class             instance    title       tags mask   isfloating  monitor */
+	{ "firefox-esr",     NULL,       NULL,       1 << 1,     0,          -1 },
+    { "firefox",         NULL,       NULL,       1 << 1,     0,          -1 },
+    { "discord",         NULL,       NULL,       1 << 3,     0,          -1 },
+    { "steam",           NULL,       NULL,       1 << 4,     0,          -1 },
+    { "blueman-manager", NULL,       NULL,       0,          1,          -1 },
+    { "Blueman-manager", NULL,       NULL,       0,          1,          -1 },
+    { "pavucontrol",     NULL,       NULL,       0,          1,          -1 },
 };
 
 /* layout(s) */
@@ -105,16 +105,21 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,    tag,        {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,    toggletag,  {.ui = 1 << TAG} },
 
+/* commands */
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+/* component of dmenucmd, manipulated in spawn() */
+static char dmenumon[2] = "0";
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i",
                                   "-l", "5", "-fn", dmenufont, "-x",
                                   "660", "-y", "400", "-z", "600",
                                   NULL };
-static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
+
+static const char *roficmd[] = { "rofi", "-show", "drun",
+                                 "-show-icons", NULL };
+
 static const char *termcmd[]  = { "st", NULL };
 static const char *quitDwm[] = { "pkill", "dwm", NULL };
 
