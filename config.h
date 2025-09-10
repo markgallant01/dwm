@@ -72,6 +72,8 @@ static const Rule rules[] = {
     { "firefox",         NULL,       NULL,       1 << 1,     0,          -1 },
     { "discord",         NULL,       NULL,       1 << 3,     0,          -1 },
     { "steam",           NULL,       NULL,       1 << 4,     0,          -1 },
+    { NULL,              NULL,       "Steam",    1 << 4,     0,          -1 },
+    { "zenity",          NULL,       NULL,       1 << 4,     0,          -1 },
     { "blueman-manager", NULL,       NULL,       0,          1,          -1 },
     { "Blueman-manager", NULL,       NULL,       0,          1,          -1 },
     { "pavucontrol",     NULL,       NULL,       0,          1,          -1 },
