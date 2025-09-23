@@ -12,7 +12,7 @@ static const unsigned int snap = 32;
 
 /* 0: sloppy systray follows selected monitor,
    >0: pin systray to monitor X */
-static const unsigned int systraypinning = 0;
+static const unsigned int systraypinning = 1;
 
 /* 0: systray in the right corner,
    >0: systray on left of status text */
